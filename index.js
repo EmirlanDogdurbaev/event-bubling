@@ -29,8 +29,81 @@
 // })
 
 
-let p = document.querySelector('p')
+// let p = document.querySelector('p')
 
-p.addEventListener('mousedown', function(event){
-    event.preventDefault()
-})
+// p.addEventListener('mouseup', function(event){
+//     event.preventDefault()
+// })
+
+// let div = document.querySelector('div');
+// let a = document.querySelector('a');
+// let i = 0;
+
+// div.addEventListener('mousedown', function(event) {
+//     i++;
+//     this.innerHTML = i + ". mousedown - " + event.which + "<br>" + this.innerHTML;
+// });
+// div.addEventListener('mouseup', function(event) {
+//     i++;
+//     this.innerHTML = i + ". mouseup<br>" + this.innerHTML;
+// });
+// div.addEventListener('click', function(event) {
+//     console.log(event.clientX, event.clientY);
+//     console.log(event.pageX, event.pageY);
+
+//     i++;
+//     this.innerHTML = i + ". click<br>" + this.innerHTML;
+// });
+// div.addEventListener('dblclick', function(event) {
+//     i++;
+//     this.innerHTML = i + ". dblclick<br>" + this.innerHTML;
+// });
+// div.addEventListener('contextmenu', function(event) {
+//     i++;
+//     this.innerHTML = i + ". contextmenu<br>" + this.innerHTML;
+// });
+
+
+a.addEventListener('click', function(event) {
+    // altKey, shiftKey, metaKey
+    if (!event.ctrlKey && !event.altKey) {
+        event.preventDefault();
+    }
+});
+
+
+let ol = document.querySelectorAll("ol");
+
+ol.addEventListener('click' , function(event){
+    if(event.target.tagName == 'LI'){
+        event.target.classList.toggle('selected');
+    }
+});
+
+let parent = document.querySelector('.parent');
+let child = document.querySelector('.child');
+let result = document.querySelector('#result');
+
+parent.addEventListener('mouseenter', function(event) {
+    console.log('mouseenter - ' + this.className);
+});
+parent.addEventListener('mouseleave', function(event) {
+    console.log('mouseleave - ' + this.className);
+});
+child.addEventListener('mouseenter', function(event) {
+    console.log('mouseenter - ' + this.className);
+});
+child.addEventListener('mouseleave', function(event) {
+    console.log('mouseleave - ' + this.className);
+});
+
+parent.addEventListener('mousemove', function(event) {
+    console.log('mousemove - ' + this.className);
+});
+
+parent.addEventListener('mouseover', function(event) {
+    console.log('mouseover - ' + this.className);
+});
+parent.addEventListener('mouseout', function(event) {
+    console.log('mouseout - ' + this.className);
+});

@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+.square{
+    background:gold;
+    height: 3px;
+    width: 3px;
+    position: absolute;
+}

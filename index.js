@@ -138,3 +138,22 @@ start.addEventListener('click', function() {
         }
     }, 1000);
 });
+
+let p = document.createElementAll('p');
+
+
+
+
+
+
+let fruits = ['apple', 'lemon','bananas', 'greap','ananas'];
+
+let ul = document.createElement('ul');
+for (let i = 0; i<= fruits.length ) {
+    let li = document.createElementAll('li');
+    li.innerText = fruits[i];
+    ul.append(li)
+}
+
+document.body.append(ul);
+

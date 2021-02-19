@@ -75,8 +75,6 @@
 //     document.body.append(span)
 // })
 
-
-
 // let fruits = ["apple", "lemon", "bananas", "greap"];
 // let ul = document.createElement("ul");
 // for (let i = 0; i < fruits.length; i++) {
@@ -113,58 +111,113 @@
 //   }
 // });
 
+// let example1 = ["apple", "banana", "lemon", "oruk", "badyran"];
 
-let example1 = ['apple', 'banana', 'lemon', 'oruk', 'badyran'];
+// let ul = document.createElement("ul");
+// let li = document.createElement("li");
 
-let ul = document.createElement('ul');
-let li = document.createElement('li');
+// document.body.append(ul);
+
+// for (let i = 0; i < example1.length; i++) {
+//   let li = document.createElement("li");
+//   let span = document.createElement("span");
+//   let button = document.createElement("button");
+
+//   span.innerText = example1[i];
+
+//   button.innerText = "-";
+
+//   button.addEventListener("click", function (event) {
+//     li.remove();
+//   });
+//   span.addEventListener("click", function () {
+//     span.classList.toggle("done");
+//   });
+
+//   ul.append(li);
+//   li.append(span);
+//   li.append(button);
+// }
+
+// document.body.append(ul);
+
+// let bt = document.querySelector("#bt");
+// let input = document.querySelector("#in");
+
+// bt.addEventListener("click", function (event) {
+//   if (input.value.trim()) {
+//     let li = document.createElement("li");
+//     let span = document.createElement("span");
+//     span.innerText = input.value;
+//     ul.append(li);
+//     li.append(span);
+//     input.value = "";
+//     let button = document.createElement("button");
+//     button.innerText = "-";
+//     li.append(button);
+//     button.addEventListener("click", function (event) {
+//       li.remove();
+//     });
+//     span.addEventListener("click", function () {
+//       span.classList.toggle("done");
+//     });
+//   }
+// });
 
 
 
-document.body.append(ul);
 
 
 
-for (let i = 0; i < example1.length; i++) {
-    let li = document.createElement('li');
-    let span = document.createElement('span');
-    span.innerText = example1[i];
-    ul.append(li)
-    li.append(span)
-    let button = document.createElement('button');
-    button.innerText = '-';
-    li.append(button);
-    button.addEventListener('click', function (event) {
-        li.remove();
-    });
-    span.addEventListener("click", function(){
-        span.classList.toggle('done')
-    })
-}
 
-document.body.append(ul);
 
-let bt = document.querySelector('#bt');
-let input = document.querySelector('#in');
 
-bt.addEventListener('click', function (event) {
+
+
+
+// let fruits = ["Limon", "Lime", "Apple", "Banana", '', '   '];
+
+// let ul = document.createElement("ul");
+// let input = document.querySelector("input");
+// let button = document.querySelector("button");
+
+// document.body.append(ul);
+// for (let i in fruits) {
+//     let li = returnListItem(fruits[i]);
+//     if (li) {
+//         ul.append(li);
+//     }
+// }
+
+// button.addEventListener("click", function () {
+//     let li = returnListItem(input.value);
+//     if (li) {
+//         input.value = '';
+//         ul.append(li);
+//     }
+// });
+
+// function returnListItem(text = '') {
+//     if (!text.trim()) {
+//         return false;
+//     }
+
+//     let li = document.createElement("li");
+//     let button = document.createElement("button");
+//     let span = document.createElement("span");
+
+//     button.innerText = "-";
+//     span.innerText = text;
+
+//     button.addEventListener("click", function () {
+//         li.remove();
+//     });
+//     span.addEventListener("click", function () {
+//         span.classList.toggle('done');
+//     });
+
+//     li.append(span);
+//     li.append(button);
     
-
-    if(input.value.trim()){
-        let li = document.createElement('li');
-        let span = document.createElement('span');
-    span.innerText = input.value;
-    ul.append(li);
-    li.append(span);
-    input.value = '';
-    let button = document.createElement('button');
-    button.innerText = '-';
-    li.append(button);
-    button.addEventListener('click', function (event) {
-        li.remove();
-    });
-    span.addEventListener("click", function(){
-        span.classList.toggle('done')
-    })
-    }
-});
+//     return li;
+// }
